@@ -18,7 +18,7 @@ struct ContentView: View {
                         Image(systemName: "person.3.fill")
                         Text("Contacts")
                     }
-                NumbersView()
+                NumbersView(personInfo: personList)
                     .tabItem {
                         Image(systemName: "phone.fill")
                         Text("Numbers")

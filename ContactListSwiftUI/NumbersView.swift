@@ -8,13 +8,19 @@
 import SwiftUI
 
 struct NumbersView: View {
+    let personInfo: [Person]
+    
     var body: some View {
-        Text("Numbers")
+        List(personInfo, id: \.self) {person in
+            Text("\(person.firstName) \(person.lastName)")
+            Text(person.phoneNumber)
+            Text(person.email)
+        }
     }
 }
 
 struct NumbersView_Previews: PreviewProvider {
     static var previews: some View {
-        NumbersView()
+        NumbersView(personInfo: Person.getPersonList())
     }
 }
