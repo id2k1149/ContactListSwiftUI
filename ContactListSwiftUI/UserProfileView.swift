@@ -17,10 +17,13 @@ struct UserProfileView: View {
                 .bold()
             
             List {
-                Image(systemName: "person.fill")
-                    .resizable()
+                HStack {
+                    Spacer()
+                    Image(systemName: "person.fill")
+                        .resizable()
                     .frame(width: 150, height: 150)
-                    
+                    Spacer()
+                }
                 HStack {
                     Image(systemName: "phone")
                         .foregroundColor(.blue)
@@ -31,9 +34,10 @@ struct UserProfileView: View {
                         .foregroundColor(.blue)
                     Text(person.email)
                 }
-                
             }
+           
         }
+//        .navigationTitle(person.fullName)
     }
 }
 
