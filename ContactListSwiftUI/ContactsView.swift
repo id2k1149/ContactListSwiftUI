@@ -8,13 +8,24 @@
 import SwiftUI
 
 struct ContactsView: View {
+    let personInfo: [Person]
+    
     var body: some View {
-        Text("Contacts")
+        VStack {
+            Text("Contact List")
+                .font(.title)
+            ForEach(
+                personInfo,
+                id: \.self) { person in
+                    Text("\(person.firstName) \(person.lastName)")
+                }
+        }
+        
     }
 }
 
 struct ContactsView_Previews: PreviewProvider {
     static var previews: some View {
-        ContactsView()
+        ContactsView(personInfo: Person.getPersonList() )
     }
 }

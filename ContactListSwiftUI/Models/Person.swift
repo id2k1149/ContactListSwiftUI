@@ -5,7 +5,8 @@
 //  Created by Max Franz Immelmann on 11/9/22.
 //
 
-struct Person {
+struct Person: Hashable {
+    let id: Int
     let firstName: String
     let lastName: String
     let phoneNumber: String
@@ -38,6 +39,7 @@ struct Person {
         
         for index in 0..<iterationCount {
             let person = Person(
+                id: index,
                 firstName: names[index],
                 lastName: lastNames[index],
                 phoneNumber: phoneNumbers[index],
