@@ -11,18 +11,11 @@ struct ContactsView: View {
     let personInfo: [Person]
     
     var body: some View {
-        VStack(alignment: .leading) {
-            Text("Contact List")
-                .font(.largeTitle)
-                .bold()
-                .padding()
-                
-            List(personInfo, id: \.self) { person in
-                Text("\(person.firstName) \(person.lastName)")
-                    .font(.title3)
-            }
-            .listStyle(.plain)
+        List(personInfo, id: \.self) {person in
+            Text("\(person.firstName) \(person.lastName)")
+                .font(.title3)
         }
+        .listStyle(.plain)
     }
 }
 

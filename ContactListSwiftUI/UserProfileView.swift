@@ -23,10 +23,12 @@ struct UserProfileView: View {
                     
                 HStack {
                     Image(systemName: "phone")
+                        .foregroundColor(.blue)
                     Text(person.phoneNumber)
                 }
                 HStack {
                     Image(systemName: "tray")
+                        .foregroundColor(.blue)
                     Text(person.email)
                 }
                 
