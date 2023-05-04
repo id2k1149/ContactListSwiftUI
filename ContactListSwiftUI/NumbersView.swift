@@ -11,10 +11,19 @@ struct NumbersView: View {
     let personInfo: [Person]
     
     var body: some View {
-        List(personInfo, id: \.self) {person in
-            Text("\(person.firstName) \(person.lastName)")
-            Text(person.phoneNumber)
-            Text(person.email)
+        List(personInfo) {person in
+            Section(header: Text(person.fullName)) {
+                HStack {
+                    Image(systemName: "phone")
+                        .foregroundColor(.blue)
+                    Text(person.phoneNumber)
+                }
+                HStack {
+                    Image(systemName: "tray")
+                        .foregroundColor(.blue)
+                    Text(person.email)
+                }
+            }
         }
     }
 }

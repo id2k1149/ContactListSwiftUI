@@ -11,9 +11,9 @@ struct ContactsView: View {
     let personInfo: [Person]
     
     var body: some View {
-        List(personInfo, id: \.self) {person in
+        List(personInfo) {person in
             NavigationLink(destination: UserProfileView(person: person)) {
-                Text("\(person.firstName) \(person.lastName)")
+                Text(person.fullName)
                     .font(.title3)
             }
         }

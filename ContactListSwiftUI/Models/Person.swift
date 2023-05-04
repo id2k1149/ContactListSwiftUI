@@ -5,7 +5,10 @@
 //  Created by Max Franz Immelmann on 11/9/22.
 //
 
-struct Person: Hashable {
+import SwiftUI
+
+struct Person: Identifiable {
+    let id = UUID()
     let firstName: String
     let lastName: String
     let phoneNumber: String
