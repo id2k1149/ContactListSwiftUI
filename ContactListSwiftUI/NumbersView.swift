@@ -11,19 +11,22 @@ struct NumbersView: View {
     let personInfo: [Person]
     
     var body: some View {
-        List(personInfo) {person in
-            Section(header: Text(person.fullName)) {
-                HStack {
-                    Image(systemName: "phone")
-                        .foregroundColor(.blue)
-                    Text(person.phoneNumber)
-                }
-                HStack {
-                    Image(systemName: "tray")
-                        .foregroundColor(.blue)
-                    Text(person.email)
+        NavigationStack {
+            List(personInfo) {person in
+                Section(header: Text(person.fullName)) {
+                    HStack {
+                        Image(systemName: "phone")
+                            .foregroundColor(.blue)
+                        Text(person.phoneNumber)
+                    }
+                    HStack {
+                        Image(systemName: "tray")
+                            .foregroundColor(.blue)
+                        Text(person.email)
+                    }
                 }
             }
+            .navigationTitle("Contact List")
         }
     }
 }
