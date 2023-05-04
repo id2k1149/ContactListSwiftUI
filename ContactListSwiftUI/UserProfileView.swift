@@ -11,12 +11,7 @@ struct UserProfileView: View {
     let person: Person
     
     var body: some View {
-        VStack(alignment: .leading) {
-            Text(person.fullName)
-                .font(.largeTitle)
-                .bold()
-                .padding(.leading)
-            
+        NavigationStack {
             List {
                 HStack {
                     Spacer()
@@ -36,7 +31,7 @@ struct UserProfileView: View {
                     Text(person.email)
                 }
             }
-           
+            .navigationTitle(person.fullName)
         }
     }
 }
