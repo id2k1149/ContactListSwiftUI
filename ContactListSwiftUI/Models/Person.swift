@@ -6,7 +6,6 @@
 //
 
 struct Person: Hashable {
-    let id: Int
     let firstName: String
     let lastName: String
     let phoneNumber: String
@@ -39,7 +38,6 @@ struct Person: Hashable {
         
         for index in 0..<iterationCount {
             let person = Person(
-                id: index,
                 firstName: names[index],
                 lastName: lastNames[index],
                 phoneNumber: phoneNumbers[index],

@@ -14,13 +14,14 @@ struct ContactsView: View {
         VStack {
             Text("Contact List")
                 .font(.title)
-            ForEach(
+                .bold()
+            
+            List(
                 personInfo,
                 id: \.self) { person in
                     Text("\(person.firstName) \(person.lastName)")
                 }
         }
-        
     }
 }
 
