@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct ContactsView: View {
-    let personInfo: [Person]
+    let persons: [Person]
     
     var body: some View {
         NavigationStack {
-            List(personInfo) {person in
+            List(persons) {person in
                 NavigationLink(destination: UserProfileView(person: person)) {
                     Text(person.fullName)
                         .font(.title3)
@@ -26,6 +26,6 @@ struct ContactsView: View {
 
 struct ContactsView_Previews: PreviewProvider {
     static var previews: some View {
-        ContactsView(personInfo: Person.getPersonList() )
+        ContactsView(persons: Person.getPersonList() )
     }
 }

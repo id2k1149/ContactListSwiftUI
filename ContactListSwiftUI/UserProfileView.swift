@@ -11,7 +11,6 @@ struct UserProfileView: View {
     let person: Person
     
     var body: some View {
-        NavigationStack {
             List {
                 HStack {
                     Spacer()
@@ -32,7 +31,6 @@ struct UserProfileView: View {
                 }
             }
             .navigationTitle(person.fullName)
-        }
     }
 }
 

@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct NumbersView: View {
-    let personInfo: [Person]
+    let persons: [Person]
     
     var body: some View {
         NavigationStack {
-            List(personInfo) {person in
+            List(persons) {person in
                 Section(header: Text(person.fullName)) {
                     HStack {
                         Image(systemName: "phone")
@@ -33,6 +33,6 @@ struct NumbersView: View {
 
 struct NumbersView_Previews: PreviewProvider {
     static var previews: some View {
-        NumbersView(personInfo: Person.getPersonList())
+        NumbersView(persons: Person.getPersonList())
     }
 }
