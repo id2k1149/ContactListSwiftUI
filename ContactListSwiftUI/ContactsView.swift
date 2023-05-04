@@ -12,8 +12,10 @@ struct ContactsView: View {
     
     var body: some View {
         List(personInfo, id: \.self) {person in
-            Text("\(person.firstName) \(person.lastName)")
-                .font(.title3)
+            NavigationLink(destination: UserProfileView(person: person)) {
+                Text("\(person.firstName) \(person.lastName)")
+                    .font(.title3)
+            }
         }
         .listStyle(.plain)
     }
