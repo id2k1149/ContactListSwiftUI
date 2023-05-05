@@ -15,6 +15,7 @@ struct NumbersView: View {
             List(persons) {person in
                 Section(header: Text(person.fullName)
                     .textCase(nil)
+                    .bold()
                     .font(.title3)) {
                     HStack {
                         Image(systemName: "phone")
