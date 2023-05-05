@@ -13,7 +13,9 @@ struct NumbersView: View {
     var body: some View {
         NavigationStack {
             List(persons) {person in
-                Section(header: Text(person.fullName)) {
+                Section(header: Text(person.fullName)
+                    .textCase(nil)
+                    .font(.title3)) {
                     HStack {
                         Image(systemName: "phone")
                             .foregroundColor(.blue)
