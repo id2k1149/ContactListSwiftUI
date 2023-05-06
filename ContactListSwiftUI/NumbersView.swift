@@ -17,16 +17,8 @@ struct NumbersView: View {
                     .textCase(nil)
                     .bold()
                     .font(.title3)) {
-                    HStack {
-                        Image(systemName: "phone")
-                            .foregroundColor(.blue)
-                        Text(person.phoneNumber)
-                    }
-                    HStack {
-                        Image(systemName: "tray")
-                            .foregroundColor(.blue)
-                        Text(person.email)
-                    }
+                    Label(person.phoneNumber, systemImage: "phone")
+                    Label(person.email, systemImage: "tray")
                 }
             }
             .navigationTitle("Contact List")

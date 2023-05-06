@@ -19,16 +19,8 @@ struct UserProfileView: View {
                     .frame(width: 150, height: 150)
                 Spacer()
             }
-            HStack {
-                Image(systemName: "phone")
-                    .foregroundColor(.blue)
-                Text(person.phoneNumber)
-            }
-            HStack {
-                Image(systemName: "tray")
-                    .foregroundColor(.blue)
-                Text(person.email)
-            }
+            Label(person.phoneNumber, systemImage: "phone")
+            Label(person.email, systemImage: "tray")
         }
         .navigationTitle(person.fullName)
         .navigationBarBackButtonHidden(true)
